@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Looking into XXX space technology</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Roboto:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		body, section, img, h1, p, div {margin: 0; padding: 0;}
+		body {background: black; height: 100vh; overflow:hidden;}
+		section { overflow:hidden; word-break: keep-all;}
+
+		img{display: block; position: absolute; width:10px; animation: r 4s linear forwards; opacity: 100%; z-index: -100px; }
+		
+		
+
+		
+
+
+		
+		.absolute {position: absolute; display: block;}
+
+		.row1 {width: 100vw; height: 100vh; overflow:hidden; }
+
+		
+		
+		
+	
+		
+
+
+		
+		
+
+		
+
+		
+		
+		/*중앙 원 위치, 애니메이션*/
+
+		.row2{ width: 100vw; height: 100vw; position: absolute; }
+		
+		.row3{ width: 100vw; height: 100vw; position: absolute;
+		border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 98%; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 47%;}
+
+
+
+
+
+		.in{position: absolute; left: 0; transform: translate(-50%, -50%);
+			left: 50vw; top: 2.5vw;}
+	
+		
+		
+		.c1 { width: 43.5vw; }
+		.c2 { width: 39vw;   }
+		.c3 {  width: 31vw; }
+		.c4 { width: 22.5vw;}
+		.c5 { width: 23vw;}
+		.c6 { width: 16vw; }
+		.c7 {width: 15vw;}
+		.c8 {width: 7vw; z-index: 30px; }
+		.c9 {width: 100vw; top: 1.3vw;  }
+		.c10 {animation: k7 1s infinite }
+		
+		
+
+		.cc1 {  width: 43.5vw; top: -1vw;  animation: k7  10s infinite  ;}
+		.cc2 { width: 39.2vw; top: 1.6vw;animation: k7  10s infinite  ; }
+      	.cc3 { width: 31vw; top: 5.5vw;animation: k7  10s infinite; }
+      	.cc4 { width: 22.5vw; top: 14.8vw; animation: k7  10s infinite ; }
+      	.cc5 { width: 23vw; top: 9.8vw;animation: k7  10s infinite ; }
+      	.cc6 { width: 16vw; top: 13vw;animation: k7  10s infinite  ;}
+      	.cc7 { width: 15vw; top: 13.5vw;animation: k7  10s infinite ; }
+      	.cc8 { width: 9vw; top: 15vw; left: -1vw;  cursor: pointer; animation: jump 2s infinite;}
+      	
+      	@keyframes k7 { 0% { opacity: 0%; }
+						100%{opacity: 100%}}
+
+		#poetText {position: absolute; font-size: 4vw; color: white; z-index: 30; left: 13vw; top: 82vh;font-weight: 500; letter-spacing :5px;
+		font-family: 'Roboto', sans-serif; font-style: italic;}
+
+
+	
+		
+		
+		
+		
+		#one2:hover {width: 13vw; left: -3vw; top: 11vw;}
+
+		@keyframes jump{0%{} 100%{transform: rotate3d(0,1,0,360deg); } }
+		
+		 
+		
+
+		.two{ position: absolute;
+		border-top: 3px solid #1CE8E3; border-bottom:3px solid #1CE8E3; width: 98%; border-left: 3px solid #1CE8E3; border-right: 3px solid #1CE8E3; height: 47%; transition: all .5s; animation: k8  5s  ;}
+		.two2{ position: absolute; top: 0.7%; left: 1%;}
+
+
+			@keyframes k8 { 0% { opacity: 0%; transform: scale(0.0); }
+						100%{opacity: 100%; transform: scale(1.0 );}}
+
+		
+		
+		
+		
+		
+
+	</style>
+</head>
+<body >
+	<section >
+	
+
+
+		<div class="row2 ">
+		<div id="poetText"></div>
+			
+		<!-- 중앙 원 -->	
+		
+
+
+			<div class="in c1" >
+				<img src= "c1.png"  class=" cc1" ></div>
+			
+			<div class="in c2" >
+				<img src= "c2.png"  class=" cc2" ></div>
+			
+			<div class="in c3" > 
+				<img src= "c3.png"  class=" cc3" ></div>
+			
+			<div class="in c4" >
+				<img src= "c4.png"  class=" cc4" ></div>
+			
+			<div class="in c5" >
+				<img src= "c5.png"  class=" cc5" ></div>
+			
+			<div class="in c6"  >
+				<img src= "c6.png"  class=" cc6" ></div>
+			
+			<div class="in c7"  >
+				<img src= "c7.png"  class=" cc7" ></div>
+			
+			<div class=" two two2 " id="two"></div>
+			
+			<div class="in c8 " id="one"   >
+				<img src= "c8.png"  class=" cc8" id="one2" ></div>
+
+
+			
+			
+			
+
+	</div>
+
+
+		
+
+	
+
+		
+
+		
+
+		
+		
+	
+</section>
+
+		<script type="text/javascript">
+			var poet = "Looking into XXX space technology ";
+			var poetArr = poet.split("");
+			console.log(poetArr);
+			var myTimer = setInterval(print,100);
+			var k = 0;
+			function print(){ poetText.innerHTML += poetArr[k];
+			k++;
+			if (k == poetArr.length ){clearInterval(myTimer);
+			}
+			}
+
+
+			one2.onclick = function(){
+		location.href = "index2.html";
+ 	};
+
+	</script>
+
+
+
+			
+							
+
+
+
+		
+
+</body>
+</html>

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Looking into XXX space technology</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Roboto:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		body, section, img, h1, p, div {margin: 0; padding: 0;}
+		body {perspective:300px; background: rgb(0,0,0);
+				background: radial-gradient(circle, rgba(0,0,0,1) 81%, rgba(121,250,222,1) 100%); width: 100vw; height: 100vh; overflow:hidden;}
+		section { overflow:hidden; word-break: keep-all;}
+
+		img{display: block; position: absolute; width:10px; animation: r 4s linear forwards; opacity: 100%; z-index: -100px; }
+		
+		@keyframes r { to{ transform: translate3d(0,0,500px)}
+			from{ transform: translate3d(0,0,-1000px)} }
+
+		
+
+
+		
+		.absolute {position: absolute; display: block;}
+
+		.row1 {width: 100vw; height: 100vh; overflow:hidden; }
+
+		
+		
+		
+		.row3{ border: 3px solid #1CE8E3; transition: all 0.5s; box-sizing: border-box; box-shadow: 1px 1px 20px 1px #1CE8E3;
+			border-radius: 70px 0px 0px 0px;  
+			width: 16vw; height: 25vh; left: 83vw; top:50px ; overflow:hidden;
+			font-weight: 500; text-align: center; color: white; 
+			animation: k6 1.2s infinite; }
+		
+		.row4{border: 3px solid #1CE8E3; transition: all 0.5s; box-sizing: border-box; border-radius: 70px 0px 0px 0px;
+		 	box-shadow: 1px 1px 20px 1px #1CE8E3 ; 
+		 	width: 16vw; height: 23vh; left: 83vw; top:300px; 
+		 	overflow:hidden; text-align: center; color: white;font-size: 1.5vw;
+			 font-family: 'Noto Sans KR', sans-serif; font-weight: 400;
+			animation: k6 1.2s infinite;}
+		
+		.row5{ border: 3px solid #1CE8E3; transition: all 0.5s; box-sizing: border-box; border-radius: 70px 0px 0px 0px; 
+			box-shadow: 1px 1px 20px 1px #1CE8E3;
+			width: 16vw; height: 23vh; left: 83vw; top:580px; 
+			overflow:hidden; text-align: center; color: white; font-size: 1vw; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; 
+			animation: k6 1.2s infinite; }
+		
+
+
+		
+		/*텍스트, 그래프 호버*/
+		.container{display: flex;}
+
+		.col1:hover { height: 25%;overflow: scroll; top:50px; background: black;animation:none;}
+		.col1:hover ~ #d1{width: 5%;  }
+		
+		.col2:hover {height: 25%;overflow: scroll; top:200px;background: black; animation:none}
+		.col2:hover ~ #d2{width: 50%; }
+
+		.col3:hover {height: 25%;overflow: scroll; top:330px;background: black;
+		animation:none}
+		.col3:hover ~ #d3{width: 30%; }
+
+		 .container {
+    width: 250px;
+    height: 140px;
+    overflow: auto;
+  }
+  .container::-webkit-scrollbar {
+    width: 7px;
+  }
+  .container::-webkit-scrollbar-thumb {
+    background-color:#1CE8E3;
+    border-radius: 5px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+  .container::-webkit-scrollbar-track {
+    background-color: #1CE8E3;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px white;
+  }
+
+		
+		.img1-1{height: 100%; width: 150%;}
+
+		
+
+		
+		
+		/*중앙 원 위치, 애니메이션*/
+
+		.row2{ width: 100vw; height: 100vw; position: absolute;}
+
+
+
+
+		.in{position: absolute; left: 0; transform: translate(-50%, -50%);
+			left: 50vw; top: 2.5vw;}
+		
+		
+		.c1 { width: 43.5vw; }
+		.c2 { width: 39vw;   }
+		.c3 {  width: 31vw; }
+		.c4 { width: 22.5vw;}
+		.c5 { width: 23vw;}
+		.c6 { width: 16vw; }
+		.c7 {width: 15vw;}
+		.c8 {width: 7vw; z-index: 30px; }
+		.c9 {width: 100vw; top: 1.3vw;  }
+		.c10 {animation: k7 1s infinite }
+		
+		
+
+		.cc1 {  width: 43.5vw; top: -1vw;  animation: k4  13s infinite alternate ;}
+		.cc2 { width: 39.2vw; top: 1.6vw;animation: k1 120s infinite; }
+      	.cc3 { width: 31vw; top: 5.5vw;animation: k3 2s infinite alternate;}
+      	.cc4 { width: 22.5vw; top: 14.8vw;}
+      	.cc5 { width: 23vw; top: 9.8vw;animation: k1 40s infinite alternate;}
+      	.cc6 { width: 16vw; top: 13vw;animation: k5 5s infinite;}
+      	.cc7 { width: 15vw; top: 13.5vw;animation: k5 5s infinite;}
+      	.cc8 { width: 9vw; top: 15vw; left: -1vw; animation: jump 2s infinite; cursor: pointer;}
+      	
+      	@keyframes k7 { 0% { left: 10%; }
+						100%{left: 0%; }}
+
+		
+		/*? 한국 텍스트 호버*/
+		#two{ opacity: 0.1; }
+		#two2-1{ opacity: 0; }
+		#two2-2{ opacity: 0; }	
+		#two2-3{ opacity: 0; }		
+		#poetText{ opacity: 0; }
+		
+		#one:hover ~ #two{ opacity: 1; animation: k6 0.8s infinite; z-index: 100px;}
+		#one:hover ~ #two2-1{ opacity: 1; width: 30%; height: 3%; animation: k6 1s infinite; }
+		#one:hover ~ #two2-2 { opacity: 1;width: 55%; height: 5%;animation: k6 1s infinite;  }
+		#one:hover ~ #two2-3 { opacity: 1; width: 42%; height: 20%; z-index: 100px; }
+
+		#one:hover ~ #poetText{ opacity: 1; }
+		#one2:hover { animation: none; top: 11vw; width: 13vw; left: -3vw;}
+		
+		.text1 {color: white; font-size: 3vw; font-weight: 400;
+				text-align: center; font-family: 'Roboto', sans-serif; background: red;}
+
+		.banner5-1 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .9s; top: 26%;left: 80%; }
+
+		.banner5-2 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .9s; top: 42%; left: 30%;  }
+
+		.banner5-3 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .7s; top: 22%; left:24%;   }
+
+		
+		#two2-1{position: absolute; font-size: 2vw; color: white; z-index: 30; font-weight: 500; letter-spacing :0px;
+		font-family: 'Noto Sans KR', sans-serif;  text-align: center; }
+
+		#two2-2{position: absolute; font-size: 4vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px;
+		font-family: 'Roboto', sans-serif; font-style: italic; text-align: center; }
+
+
+		#two2-3{position: absolute; font-size: 1.1vw; color: white; z-index: 30; font-weight: 500; letter-spacing :0px;
+		font-family: 'Noto Sans KR', sans-serif;  }
+		
+
+		@keyframes k1 { 0% {transform: rotate(0);} 100%{transform: rotate(360deg)}}
+
+		@keyframes k2 { 0% {transform: rotate(0);} 
+						30% {transform: rotate(200deg);}
+						100%{transform: rotate(360deg);}
+					} 
+
+		@keyframes k3 { 0% {transform: rotate(0) scale(1);} 
+						35% {transform: rotate(360deg) scale(1);}
+						40%{transform: rotate(360deg) scale(.5);}
+						60%{transform: rotate(400deg) scale(.5);}
+						65%{transform: rotate(0deg) scale(1);}
+						100%{transform: rotate(360deg) scale(1);} 
+					}
+		@keyframes k4 { 0% {transform: rotate(0) scale(1);} 
+						35% {transform: rotate(360deg) scale(1);}
+						40%{transform: rotate(360deg) scale(.6);}
+						60%{transform: rotate(400deg) scale(.6);}
+						65%{transform: rotate(0deg) scale(1);}
+						100%{transform: rotate(360deg) scale(1);} 
+					}
+		@keyframes k5 { 0% {transform: scale(1);} 
+						35% {transform: scale(1);}
+						40%{transform: scale(.7);}
+						60%{transform: scale(.7);}
+						65%{transform: scale(1);}
+						100%{transform: scale(1);} 
+					}
+
+		@keyframes jump{0%{} 100%{transform: rotate3d(0,1,0,360deg); } }
+
+
+
+		@keyframes k6 { 0% {opacity: 40%;} 100%{ opacity: 100%}}
+		@keyframes k7 { 0% {left: 150%;} 100%{ left: -50%;}}
+
+		
+		/*왼쪽 라인과 원 디피*/
+		.L1 {width: 0.3%; height: 72%; left: 1vw; top:200px; animation: k6 1s infinite; }
+		.L2 {width: 0.8%;  left: 0.8vw; top:70px; animation: k6 0.5s infinite; }
+		.L3 {width: 0.8%;  left: 0.8vw; top:105px; animation: k6 0.5s infinite; }
+		.L4 {width: 0.8%;  left: 0.8vw; top:145px; animation: k6 0.5s infinite; }
+
+		#poetText {position: absolute; font-size: 8vw; color: white; z-index: 30; left: 60vw; top: 60vh;font-weight: 500; letter-spacing :20px;
+		font-family: 'Roboto', sans-serif; font-style: italic;}
+
+		#poetText2 {position: absolute; font-size: 8vw; color: white; z-index: 30; left: 60vw; top: 60vh;font-weight: 500; letter-spacing :20px;
+		font-family: 'Roboto', sans-serif; font-style: italic;}
+
+
+
+
+		
+		
+		
+
+		/*컬러*/
+		#c1 {position: absolute; left: 2vW; top:2.5vh; }
+		.B2 {background-color:transparent; width: 150px;height: 30px;border-color: #1CE8E3; }
+
+		
+		/*미국 */
+		
+		
+		.t1 { width: 15vw; }
+		.t2 { width: 12vw; }
+		.t3 { width: 13.8vw;}
+		.t4 { width: 10vw;  }
+		.banner1-1 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .5s; top: 32%;
+			left: 30%; background: black; }
+		.banner1-1-1 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .9s; top: 15%;
+			left: 35%;  }
+		
+	
+		.banner1-2 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .7s; top: 32%;
+			left: 60%;   }
+	
+		.banner1-3 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .9s; top: 7%;
+			left: 43%; }
+	
+	
+		
+	
+		.tt1 { width: 15vw; animation: k4  5s infinite alternate ;}
+		.tt2 { width: 12vw; top: 1.3vw; animation: k1 3s infinite;}
+		.tt3 { width: 13.8vw;left: 1.8vw; top: 2.1vw; animation: k6 1.5s infinite;}
+		.tt4 { width: 10vw; top: 2vw; animation: k6 1s infinite; cursor: pointer;
+		 cursor: ;}
+		
+		.in2 {position: absolute; left: 0; transform: translate(-50%, -50%);
+			left: 75vw; top: 2vw;}
+
+		#poetText3{ opacity: 0; }
+		#poetText3-1{ opacity: 0; }
+		#poetText4{ opacity: 0; }
+		#poetText5{ opacity: 0; }	
+		
+		#am1:hover ~ #poetText3{ opacity: 1; width: 15%; height: 20%;animation: k6 4s infinite;  }
+		#am1:hover ~ #poetText3-1{ opacity: 1;width: 55%; height: 5%;animation: k6 1s infinite;  }
+	
+		#am1:hover ~ #poetText4{ opacity: 1; width: 43%; height: 20%; z-index: 100px; }
+		#am1:hover ~ #poetText5{ opacity: 1; width: 40%; height: 8%; animation: k6 1s infinite; }
+		
+		#am3:hover { animation: none; width: 19vw; left: -3.5vw; top: -1.5vh}
+
+		
+		#poetText5 {position: absolute; font-size: 6vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px;
+		font-family: 'Roboto', sans-serif; font-style: italic; text-align: center; }
+		
+		#poetText3-1 {position: absolute; font-size: 4vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px;
+		font-family: 'Roboto', sans-serif; font-style: italic; text-align: center; }
+		
+		
+		#poetText4 {position: absolute; font-size: 1.1vw; color: white; z-index: 30; font-weight: 500; letter-spacing :0px;
+		font-family: 'Noto Sans KR', sans-serif;  }
+ 
+
+		/*프랑스 */
+		
+	
+		.t5 { width: 12vw; }
+		.t6 { width: 12.5vw; }
+		.t7 { width: 10vw;}
+		.t8 { width: 7vw;  }
+	
+		.tt5 { width: 12vw; animation: k1 1s infinite;}
+		.tt6 { width: 12.5vw; top: -0.5vw; animation: k6 3s infinite; }
+		.tt7 { width: 10vw; top:1vw; animation: k5 3s infinite;}
+		.tt8 { width: 7vw; top: 2.2vw; left: -0.3vw; animation: k6 2s infinite; cursor: pointer;}
+		
+		.in3 {position: absolute; left: 0; transform: translate(-50%, -50%);
+			left: 30vw; top: 2vw;}
+
+		.banner2-1 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .9s; top: 7%;
+			left: 60%; }
+		.banner2-2 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .9s; top: 15%;
+			left: 35%;  }
+		.banner2-3 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .8s; top: 25%; left: 90%;  }
+		.banner2-4 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .7s; top: 32%;
+			left: 39%;   }
+		
+
+
+		#fr2-1{ opacity: 0; }
+		#fr2-2{ opacity: 0; }	
+		#fr2-3{ opacity: 0; }	
+		#fr2-4{ opacity: 0; }		
+		#fr1:hover ~ #fr2-1{ opacity: 1; width: 42%; height: 8%; animation: k6 1s infinite; }
+		#fr1:hover ~ #fr2-2{ opacity: 1;width: 55%; height: 5%;animation: k6 1s infinite;  }
+		#fr1:hover ~ #fr2-3{ opacity: 1; width: 15%; height: 21%;animation: k6 4s infinite;  }
+		#fr1:hover ~ #fr2-4{ opacity: 1; width: 47%; height: 20%; z-index: 100px; }
+		#fr3:hover { animation: none; width: 16vw; left: -4vw; top: -1vh}
+
+		#fr2-1{position: absolute; font-size: 6vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px;
+		font-family: 'Roboto', sans-serif; font-style: italic; text-align: center; }
+
+		#fr2-2{position: absolute; font-size: 4vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px;
+		font-family: 'Roboto', sans-serif; font-style: italic; text-align: center; }
+
+		#fr2-3{border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .5s; top: 32%;
+			left: 73%;  }
+
+		#fr2-4{position: absolute; font-size: 1.1vw; color: white; z-index: 30; font-weight: 500; letter-spacing :0px;
+		font-family: 'Noto Sans KR', sans-serif;  }
+
+		/*중국 */
+		
+	
+		.t9 { width: 16vw; }
+		.t10 { width: 13.5vw; }
+		.t11{ width: 11vw;}
+		.t12{ width: 8vw;  }
+	
+		.tt9 { width: 16vw; animation: k1 1s infinite;}
+		.tt10 { width: 13.5vw; top: 1vw; animation: k5 3s infinite;}
+		.tt11{ width: 11vw; left: -4vw; top:8vw; animation: k6 2s infinite;}
+		.tt12 { width: 8vw; top: 3.7vw; left: vw; animation: k6 0.5s infinite; cursor: pointer;}
+		
+		.in4 {position: absolute; left: 0; transform: translate(-50%, -50%);
+			left: 20vw; top: 15vw;}
+
+		
+		.banner3-1 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .9s; top: 7%;
+			left: 30%; }
+		.banner3-2 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .9s; top: 15%;
+			left: 55%;  }
+		.banner3-3 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .8s; top: 28%;   }
+		.banner3-4 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .7s; top: 37%;
+			left:66%;   }
+		
+
+
+		#ch2-1{ opacity: 0; }
+		#ch2-2{ opacity: 0; }	
+		#ch2-3{ opacity: 0; }	
+		#ch2-4{ opacity: 0; }		
+		#ch1:hover ~ #ch2-1{ opacity: 1; width: 42%; height: 8%; animation: k6 1s infinite; }
+		#ch1:hover ~ #ch2-2{ opacity: 1;width: 55%; height: 5%;animation: k6 1s infinite;  }
+		#ch1:hover ~ #ch2-3{ opacity: 1; width: 15%; height: 27%;animation: k6 4s infinite;  }
+		#ch1:hover ~ #ch2-4{ opacity: 1; width: 43%; height: 20%; z-index: 100px; }
+		#ch3:hover { animation: none; width: 19vw; left: -5.5vw; top: -0.5vh}
+
+
+		#ch2-1{position: absolute; font-size: 6vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px;
+		font-family: 'Roboto', sans-serif; font-style: italic; text-align: center; }
+
+		#ch2-2{position: absolute; font-size: 4vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px;
+		font-family: 'Roboto', sans-serif; font-style: italic; text-align: center; }
+
+		#ch2-3{border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .5s; top: 34%;
+			left: 35%;  }
+
+		#ch2-4{position: absolute; font-size: 1.1vw; color: white; z-index: 30; font-weight: 500; letter-spacing :0px;
+		font-family: 'Noto Sans KR', sans-serif;  }
+
+
+		/*일본 */
+		
+	
+		.t13 { width: 12vw; }
+		.t14 { width: 10vw; }
+		.t15{ width: 4.5vw;}
+		.t16{ width: 6vw;  }
+	
+		.tt13 { width: 12vw; animation: k5 3s infinite; }
+		.tt14 { width: 10vw; top: 1vw;animation: k1 2s infinite; }
+		.tt15{ width: 4.5vw; left: -2.2vw; top:1.5vw; }
+		.tt16 { width: 6vw; top: 3vw; left: vw; animation: k6 1.5s infinite; cursor: pointer;}
+		
+		.in5 {position: absolute; left: 0; transform: translate(-50%, -50%);
+			left: 37vw; top: 38vw;}
+
+		
+
+		.banner4-1 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .9s; top: 42%;
+			left: 70%; }
+		.banner4-2 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .9s; top: 32%;
+			left: 63%;  }
+		.banner4-3 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .8s; top: 10%;   }
+		.banner4-4 {border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .7s; top: 17%;
+			left:57%;   }
+
+
+		#jp2-1{ opacity: 0; }
+		#jp2-2{ opacity: 0; }
+		#jp2-3{ opacity: 0; }
+		#jp2-4{ opacity: 0; }	
+		#jp1:hover ~ #jp2-1{ opacity: 1; width: 42%; height: 8%; animation: k6 1s infinite; }
+		#jp1:hover ~ #jp2-2{ opacity: 1;width: 55%; height: 5%;animation: k6 1s infinite;  }
+		#jp1:hover ~ #jp2-3{ opacity: 1; width: 15%; height: 27%;animation: k6 4s infinite;  }
+		#jp1:hover ~ #jp2-4{ opacity: 1; width: 43%; height: 20%; z-index: 100px; }
+		#jp3:hover { animation: none; width: 17vw; left: -6vw; top: -2vh}
+
+		#jp2-1{position: absolute; font-size: 6vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px;
+		font-family: 'Roboto', sans-serif; font-style: italic; text-align: center; }
+
+		#jp2-2{position: absolute; font-size: 4vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px;
+		font-family: 'Roboto', sans-serif; font-style: italic; text-align: center; }
+
+		#jp2-3{border-top: 4px solid #1CE8E3; border-bottom: 4px solid #1CE8E3; width: 0; border-left: 4px solid #1CE8E3; border-right: 4px solid #1CE8E3; height: 0; transition: all .5s; top: 21%;
+			left: 25%; overflow: hidden; }
+
+		#jp2-4{position: absolute; font-size: 1vw; color: white; z-index: 30; font-weight: 400; letter-spacing :1px;
+		font-family: 'Noto Sans KR', sans-serif;  }
+
+
+		/*우주선*/
+		.t13-1 { width: 20vw; }
+		.t14-1 { width: 18vw; }
+		.t15-1{ width: 12.5vw;}
+		.t16-1{ width: 14vw;  }
+	
+		.tt13-1 { width: 20vw; animation: k5 5s infinite; }
+		.tt14-1 { width: 18vw; top: 1vw;animation: k1 7s infinite; }
+		.tt15-1{ width: 12.5vw; left: -2.2vw; top:1.5vw; }
+		.tt16-1 { width: 14vw; top: 3vw; left: vw; animation: k6 3s infinite; cursor: pointer;}
+		
+		.in5-1 {position: absolute; left: 0; transform: translate(-50%, -50%);
+			left: 70vw; top: 25vw; opacity: 45%;}
+
+
+		/*우주인*/
+		.t13-2 { width: 23vw; }
+		.t14-2 { width: 19vw; }
+		.t15-2{ width: 15.5vw;}
+		.t16-2{ width: 17vw;  }
+	
+		.tt13-2 { width: 23vw; animation: k5 9s infinite; }
+		.tt14-2 { width: 19vw; top: 1vw;animation: k1 7s infinite; }
+		.tt15-2{ width: 15.5vw; left: -2.2vw; top:1.5vw; }
+		.tt16-2 { width: 11vw; top: 5.5vw; left: 3vw; animation: k6 5s infinite; cursor: pointer;}
+		
+		.in5-2 {position: absolute; left: 0; transform: translate(-50%, -50%);
+			left: 10vw; top: -5vw; opacity: 40%;}
+
+		
+		/*한국 텍스트*/
+		.kr{width: 28%; height: %;  transition: all .8s; left: 55vw; top: 70vh;}
+		.kr2{width: 20%; height: %;  transition: all .8s; left: 80vw; top: 26vh;}
+		.kr3{width: 17%; height: %;  transition: all .8s; left: 0vw; top: 30vh;}
+		.kr4{width: 16.5%; height: %;  transition: all .8s; left: 18vw; top: 75vh;}
+		.kr5{width: 16.5%; height: %;  transition: all .8s; left: 35vw; top: 0vh;}
+
+
+
+		.not { position: absolute; font-size: 1.2vw; color: white; z-index: 30; font-weight: 300; letter-spacing :0px; font-family: 'Roboto', sans-serif;
+			border-top: 2px solid #1CE8E3; border-bottom: 1.5px solid #1CE8E3; width: 15%;  border-left: 2px solid #1CE8E3; border-right: 2px solid #1CE8E3; height: 2%; top: 8%; left: 2.5%; animation: k6 1s infinite;  }
+		.not2 { position: absolute; font-size: 1vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px; font-family: 'Noto Sans KR', sans-serif;
+			border-top: 2px solid #1CE8E3; border-bottom: 2px solid #1CE8E3; width: 15%;  border-left: 2px solid #1CE8E3; border-right: 2px solid #1CE8E3; height: 2%; top: 11%; left: 2.5%; animation: k6 1s infinite; overflow: hidden;  }
+		.not3 { position: absolute; font-size: 1.2vw; color: white; z-index: 30; font-weight: 300; letter-spacing :0px; font-family: 'Roboto', sans-serif;
+			border-top: 2px solid #1CE8E3; border-bottom: 1.5px solid #1CE8E3; width: 15%;  border-left: 2px solid #1CE8E3; border-right: 2px solid #1CE8E3; height: 2%; top: 30%; left: 2.5%; animation: k6 1s infinite;  }
+		.not4 { position: absolute; font-size: 1vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px; font-family: 'Noto Sans KR', sans-serif;
+			border-top: 2px solid #1CE8E3; border-bottom: 2px solid #1CE8E3; width: 15%;  border-left: 2px solid #1CE8E3; border-right: 2px solid #1CE8E3; height: 3.5%; top: 33%; left: 2.5%; animation: k6 1s infinite; overflow: hidden;  }
+		.not5 { position: absolute; font-size: 1vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px; font-family: 'Noto Sans KR', sans-serif;
+			border-top: 2px solid #1CE8E3; border-bottom: 2px solid #1CE8E3; width: 15%;  border-left: 2px solid #1CE8E3; border-right: 2px solid #1CE8E3; height: 3.5%; top: 37.5%; left: 2.5%; animation: k6 1s infinite; overflow: hidden;  }
+		.not6 { position: absolute; font-size: 1vw; color: white; z-index: 30; font-weight: 400; letter-spacing :0px; font-family: 'Noto Sans KR', sans-serif;
+			border-top: 2px solid #1CE8E3; border-bottom: 2px solid #1CE8E3; width: 15%;  border-left: 2px solid #1CE8E3; border-right: 2px solid #1CE8E3; height: 5%; top: 42%; left: 2.5%; animation: k6 1s infinite; overflow: hidden;  }
+
+		.img1{width: 100%;}
+		.img1-1{height: 100%; width: 150%;}
+		.img1-2{height: 50%; width: 100%; top: 5vw;}
+		.img1-2-2{width: 7%; top: 16.2vw; left: 12vw; animation: k6 0.5s infinite; overflow: hidden;}
+		.img1-2-1{ top: 10vw; font-family: 'Noto Sans KR', sans-serif; font-size: 0.9vw;font-weight: 500;}
+		.img3{ top: 10vw; font-family: 'Noto Sans KR', sans-serif; font-size: 0.9vw;font-weight: 500;}
+
+		
+		
+		
+		
+
+	</style>
+</head>
+<body >
+	<section class="row1" >
+		
+		
+
+		<!-- 디스플레이 왼쪽 라인과 원 -->
+		<img src= "line1.png"  class=" absolute L1" >
+		<img src= "line2.png"  class=" absolute L2" >
+		<img src= "line2.png"  class=" absolute L3" >
+		<img src= "line2.png"  class=" absolute L4" >
+
+
+		<div class="row2">
+			
+		<!-- 중앙 원 -->	
+			<div class="in c1">
+				<img src= "c1.png"  class=" cc1" ></div>
+			
+			<div class="in c2">
+				<img src= "c2.png"  class=" cc2" ></div>
+			
+			<div class="in c3">
+				<img src= "c3.png"  class=" cc3" ></div>
+			
+			<div class="in c4">
+				<img src= "c4.png"  class=" cc4" ></div>
+			
+			<div class="in c5">
+				<img src= "c5.png"  class=" cc5" ></div>
+			
+			<div class="in c6" >
+				<img src= "c6.png"  class=" cc6" ></div>
+			
+			<div class="in c7" >
+				<img src= "c7.png"  class=" cc7" ></div>
+			
+			<div class="in c8" id="one" >
+				<img src= "c8.png"  class=" cc8" id="one2" ></div>
+			
+			
+		
+		<!-- 미국 -->
+
+			
+			<div class="in2 t1" id="am1"><img src= "n1.png" class="tt1 " ></div>
+			<div class="in2 t2"id="am1"><img src= "n2.png" class="tt2 " ></div>
+			<div class="in2 t3"id="am1"><img src= "n3.png" class="tt3 " ></div>
+			<div class="in2 t4" id="am1"><img src= "n4.png" class="tt4 " id="am3"></div>
+
+			
+			
+
+		<!-- 프랑스 -->
+			<div class="in3 t5" ><img src= "f1.png" class="tt5 " ></div>
+			<div class="in3 t6"><img src= "f2.png" class="tt6 " ></div>
+			<div class="in3 t7"><img src= "f3.png" class="tt7 " ></div>
+			<div class="in3 t8" id="fr1"><img src= "f4.png" class="tt8 " id="fr3" ></div>
+
+
+		<!-- 중국 -->
+		
+			<div class="in4 t9" ><img src= "z1.png" class="tt9 " ></div>
+			<div class="in4 t10"><img src= "z2.png" class="tt10 " ></div>
+			<div class="in4 t11"><img src= "z3.png" class="tt11 " ></div>
+			<div class="in4 t12" id="ch1"><img src= "z4.png" class="tt12 " id="ch3"></div>
+	
+		<!-- 일본 -->
+		
+			<div class="in5 t13" ><img src= "j1.png" class="tt13 " ></div>
+			<div class="in5 t14"><img src= "j2.png" class="tt14" ></div>
+			<div class="in5 t15"><img src= "j3.png" class="tt15 " ></div>
+			<div class="in5 t16" id="jp1"><img src= "j4.png" class="tt16 "
+				id = "jp3" ></div>
+
+		<!-- 우주선 -->
+		
+			<div class="in5-1 t13-1" ><img src= "j1.png" class="tt13-1 " ></div>
+			<div class="in5-1 t14-1"><img src= "c6.png" class="tt14-1" ></div>
+			
+			<div class="in5-1 t16-1" id="jp1"><img src= "how1.png" class="tt16-1 "
+				id = "jp3" ></div>
+
+
+		<!-- 우주선 -->
+		
+			<div class="in5-2 t13-2" ><img src= "n2.png" class="tt13-2 " ></div>
+			<div class="in5-2 t14-2"><img src= "j2.png" class="tt14-2" ></div>
+			
+			<div class="in5-2 t16-2" id="jp1-1"><img src= "how2.png" class="tt16-2 "
+				id = "jp3" ></div>
+
+
+
+
+		<!-- 그래프와 플렉시블 박스 -->
+		<div class="absolute row3 col1 container " id="d1">
+			<img src= "g1.png" class=" img1-2">
+			
+			<div class="img1-2-1"> <br>우주개발 인력(단위: 명)<br>미국 / 독일 / 프랑스 / 일본 / 한국<br>
+			<br><br><br><br><br><br><br><br><br><br><br>
+		17000 / 8400 / 2400 / 1500 / 1000 </div>
+		</div>
+
+		
+		<div class="absolute row4 col2 container " id="d2">
+			<img src= "g3.png" class=" img1-2">
+			
+			<div class="img3"><br>우주 개발 예산(단위: 백만불)<br><br>
+			<br><br><br><br><br><br><br><br><br><br><br>
+		미국 / 중국 / 프랑스 / 일본 / 한국<br> 21500 / 2000 / 3978 / 1459 / 476</div>
+
+		</div>
+		
+		
+		<div class="absolute row5 col3  container" id="d3">
+			<img src= "g4.png" class=" img1-2">
+			
+		
+		
+	
+		<div class="img3"><br>민간기업 우주 투자 규모 <br>(단위: 백만불)<br><br>
+		<br><br><br><br><br><br><br><br><br><br>
+		미국 / 중국 / 프랑스 / 일본 / 한국<br>26383 / X / 3429 / 785 / 412<br></div>
+		
+		</div>
+
+	<img src="kr.png" class="absolute kr">
+		<img src="kr.png" class="absolute kr2">
+		<img src="kr2.png" class="absolute kr3">
+		<img src="kr2.png" class="absolute kr4">
+		<img src="kr3.png" class="absolute kr5">
+			
+		
+	
+	<!-- 한국 텍스트 호버 -->
+		<div class=" in c9 text1" id="two">No Dedicated Organization</div>
+		<div class=" in banner5-1" id="two2-1">우주개발 전담 기관 없음</div>
+		<div class=" in banner5-2" id="two2-2">Technological Level 60%</div>
+		<div class=" in banner5-3" id="two2-3">
+		<br> • 한국 •<br>
+			 
+			
+			<br> • 2018년 시험발사체 성공으로 자력발사 기술 축적과 3단형 한국형발사체 21년 발사 성공
+			<br> • 2018년 11월 KSLV-2의 엔진시험발사체 발사에 성공
+			<br> • 정부 투자가 이루어지고 있으나 우주개발 인프라 구축이 진행중에 있음
+			<br> • 제한된 기술과 기술의 자립도 등 선도국과의 큰 격차
+			<br> • 발사체의 발사비용 과다로 발사체 시장 진입이 어려움  
+			<br> • 누리호 개발로 인한 많은 진전에도 불구하고 미국의 기술 발전 속도 추격이 어려움
+			<br> • 우주 기술 개발을 국가연구개발사업으로 인식하고 민간기업의 참여가 저조함
+			 
+		</div>
+		
+		<div id="poetText"></div>
+	
+	<!-- 미국 텍스트 -->
+		<div class=" in banner1-1" id="poetText3"><img src="n5.jpg" class="img1"></div>
+		<div class=" in banner1-1-1" id="poetText3-1">Technological Level 100%</div>
+		<div class=" in banner1-2" id="poetText4"> 
+			<br> • 미국 항공우주국 NASA •<br>
+			 
+			<br> • 국가 주도 무인탐사를 마치고 달재탐사, 기지건설, 유인 달탐사, 유인 화성탐사를 진행 중
+			<br> • 국가 우주개발기관과 민간기업의 협업으로 우주기술의 비약적 발전
+			<br> • 대규모의 민간 기업 투자
+			<br> • Space X 등 재사용 분야에서 민간 주도 단계로 발전 확대
+			<br> • 민간 발사 업체의 절감된 비용으로 발사체 운용 가능
+			<br> • 저궤도 유인 여행을 위한 시험비행 성공
+			<br> • 민간 발사체를 이용한 유인우주정거장 도킹 성공
+			<br> • 최고 수준의 발사체 기술력 및 인프라 구축
+		</div>
+		<div class=" in banner1-3" id="poetText5">United States</div>
+		
+		
+
+	<!-- 프랑스 텍스트 -->
+		<div class=" in banner2-1" id="fr2-1">France and EU</div>
+		<div class=" in banner2-2" id="fr2-2">Technological Level 92%</div>
+		<div class=" in banner2-3" id="fr2-3"><img src="fr5.jpeg" class="img1"></div>
+		<div class=" in banner2-4" id="fr2-4">
+			<br> • 전담기관 프랑스 국립우주센터 CNES •<br>
+			
+			<br> • 프랑스는 독일 등 EU의 항공우주 선도국을 중심으로 상호 협력을 통한 지속적 기술 개발을 진행 중
+			<br> • 차세대 아리안 발사체 개발을 통한 경쟁력 강화가 목표
+			<br> • 장기적으로 축적한 항공우주 기반 기술로 미국과 근소한 격차 발생
+			<br> • 기술적 부분이 미국과 대등한 수준이나 민간발사업체는 미국 대비 부족
+			<br> • 미국과 우주선의 재사용 분야 기술의 격차 존재
+			<br> • 하지만 개발 중인 아리안 6은 발사 가격이 기존의 50%수준 달성
+			<br> • 우주선 발사횟수 2배 증가위해 소형 재사용 발사체 기술 개발
+			
+		</div>
+		
+	<!-- 중국 텍스트 -->
+		<div class=" in banner3-1" id="ch2-1">China</div>
+		<div class=" in banner3-2" id="ch2-2">Technological Level 85%</div>
+		<div class=" in banner3-3" id="ch2-3"><img src="ch5.jpg" class="img1"></div>
+		<div class=" in banner3-4" id="ch2-4">
+			<br> • 중국 국가항천국 •<br>
+			
+			<br> • 2019년 1월 세계 최초로 달 후면에 우주선 '창어4호' 착륙시킴
+			<br> • 2020년 7월 화성탐사선 발사 성공
+			<br> • 정부 주도의 대규모 투자 및 개발 계획 진행으로 미국과의 기술격차 일부 감소
+			<br> • 유인우주선 운용과 고성능 엔진 개발의 성공 및 장정 6호 발사
+			<br> • 경쟁력 높은 로켓 개발보다 기존 로켓 활용 및 개선에 중점을 두고 있음
+			<br> • 창정(LM)3, 4발사체에서 창정5, 7발사체로 전환하면서 친환경추진체의 기술적 진보 진행
+			
+			<br> • 기존 개발 기술을 활용해 발사체를 개발하여 우주정거장, 달과 화성탐사 들을 수행중
+			<br> • 정부 주도 개발과정의 고수로 인해 다양한 기술혁신 부족과 민간기업의 결합이 어려움
+
+			
+		</div>
+
+		
+
+
+	<!-- 일본 텍스트 -->
+		<div class=" in banner4-1" id="jp2-1">Japan</div>
+		<div class=" in banner4-2" id="jp2-2">Technological Level 85%</div>
+		<div class=" in banner4-3" id="jp2-3"><img src="jp5.jpg" class="img1-1"></div>
+		<div class=" in banner4-4" id="jp2-4">
+			<br> • 일본 우주항공연구개발기구 JAXA •<br>
+			
+			<br> • 기술적으로 틈새기술을 추구하며 소행성 탐사선 하야부사가 이에 해당함
+			<br> • 특수 기술을 특성화하여 해외 선진국과 협력 관계 유지 
+			<br> • 신뢰도 높은 우주기술을 축적해왔으나 특유의 고비용 구조로 상업화에 있어 경쟁력이 낮음
+			<br> • 상업용 발사체 경쟁력 강화를 위해 차세대 로켓 H-3가 개발 중
+			<br> • 액체 추진 H3, 고체 추진 엡실론 등 발사 능력 향상
+			<br> • 최근 H-3 로켓 개발과 전반적 기술진전이 있었지만 미국대비 민간주도 기술의 격차가 심함
+			<br> • 발사체 운영 면에서 발사수요확보 부족으로 발사의 경쟁성 낮음
+			<br> • H-2 발사체의 다단 사이클 엔진 대신 H-3 발사체 확장 사이클 엔진으로 기술을 변경
+			<br> • 기술 수준을 낮추고 비용을 절감하는 방향으로 우주 기술을 진행중
+
+			
+		</div>
+
+		<div class="not">Notice</div>
+			<div class="not2">이미지에 마우스 커서를 올려보세요</div>
+			<div class="not3" id="poetText3"> News</div>
+			<div class="not4">글로벌 우주사업 폭발적 성장 전망 <br> 2040년 1조 1천억 달려 규모 예상</div>
+			<div class="not5">우주산업은 고부가 첨단 분야 
+				<br> 양질의 일자리 창출 가능성 </div>
+			<div class="not6">한국. 조직,예산,인력 부족
+				<br> 미국 NASA를 중심으로 한 달 탐사 '아르테미스 계획' 참여할 예정 </div>
+
+
+		
+
+
+		
+
+</div>
+
+
+		
+
+	
+
+		
+
+		
+
+		
+		
+	
+</section>
+
+		<script type="text/javascript">
+
+
+			// 한국 텍스트 배열
+			var poet = "K O R E A ";
+			var poetArr = poet.split(" ");
+			console.log(poetArr);
+			var myTimer = setInterval(print,500);
+			var k = 0;
+			function print(){ poetText.innerHTML += poetArr[k];
+			k++;
+			if (k == poetArr.length ){poetText.innerHTML = " ";
+			k = 0; }
+			
+			}
+
+
+
+			// 우주 배경
+			document.body.style.height = window.innerHeight + "px";
+			setInterval(star,3);
+			function star(){
+				var a = document.createElement("img");
+				a.style.left = randomBH(0,window.innerWidth) + "px";
+				a.style.top = randomBH(30, (window.innerHeight - 200)) + "px";
+				a.src = "st.png";
+				a.addEventListener("animationend", function(e){ 
+					e.target.parentNode.removeChild(e.target);
+				});
+				document.body.appendChild(a);
+			}
+				
+			function randomBH(min, max) {
+			  min = Math.ceil(min);
+			  max = Math.floor(max);
+			  return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+
+			window.onmousemove = function(e){
+				document.body.style.perspectiveOrigin = e.clientX + "px " + e.clientY+"px";
+			}
+			
+			
+							
+	</script>
+
+
+
+		
+
+</body>
+</html>
